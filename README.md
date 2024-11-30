@@ -12,9 +12,8 @@ Training Bowl.stl is the CAD file for the training bowl utilized in the behavior
 Plain-Less Bowl.stl is the CAD file for the bowl used in the first two testing stages of the protocol.
 Plinko Bowl.stl is the CAD file for the bowl used in the protocol's third and final testing stage.
 
-DataAnalysis:
+DataAnalysis contains Python based analysis code for interpreting SLEAP output.
 
-SLEAPModels:
-
+SLEAPModels contains centroid- and centered-based training models and the skeletong used for training.
 
 The folder "Dispenser Design" contains a depreciated apparatus set up with an automated pellet dispenser. Please refer to the included readme file for more information.
