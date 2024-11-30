@@ -5,12 +5,16 @@ Visit https://verpeutlab.org/ for more information.
 
 verpeutlab/ADMotorTask is licensed under the GNU General Public License v3.0. https://github.com/verpeutlab/ADMotorTask/blob/main/LICENSE
 
-A guide to this repository:
+The following is a guide to this repository.
 
+Bowl and Chamber Designs:
 Training Bowl.stl is the CAD file for the training bowl utilized in the behavior training session of the protocol. 
-
 Plain-Less Bowl.stl is the CAD file for the bowl used in the first two testing stages of the protocol.
-
 Plinko Bowl.stl is the CAD file for the bowl used in the protocol's third and final testing stage.
+
+DataAnalysis:
+
+SLEAPModels:
+
 
 The folder "Dispenser Design" contains a depreciated apparatus set up with an automated pellet dispenser. Please refer to the included readme file for more information.
