@@ -11,6 +11,7 @@ Bowl and Chamber Designs:
 Training Bowl.stl is the CAD file for the training bowl utilized in the behavior training session of the protocol. 
 Plain-Less Bowl.stl is the CAD file for the bowl used in the first two testing stages of the protocol.
 Plinko Bowl.stl is the CAD file for the bowl used in the protocol's third and final testing stage.
+"All Panels Schematics" includes a reference to the dimensions of all of the panels used in the apparatus design.
 
 DataAnalysis contains Python based analysis code for interpreting SLEAP output.
 
