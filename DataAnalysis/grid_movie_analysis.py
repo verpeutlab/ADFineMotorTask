@@ -1,6 +1,7 @@
 import os
 import re
 import glob
+import argparse
 import keypoint_moseq as kpms
 
 nodes = [
@@ -30,10 +31,14 @@ def extract_identifier(filename):
     m = re.search(r'(\d{12,})', filename)
     return m.group(1) if m else None
 
-dirs = [
-    "/data/jverpeut/JoVE_FineMotor/FineMotorTaskData/Harmaline_copy/Plain",
-    "/data/jverpeut/JoVE_FineMotor/FineMotorTaskData/Pilot_copy/Plain"
-]
+parser = argparse.ArgumentParser(description="Generate grid movies showing behavioral syllables.")
+parser.add_argument('--project_dir', type=str, required=True, help="Path to the KPMS project directory")
+parser.add_argument('--model', type=str, required=True, help="Name of the trained model")
+parser.add_argument('--video_dirs', type=str, nargs='+', required=True, help="Directories containing video files (AVI)")
+
+args = parser.parse_args()
+
+dirs = args.video_dirs
 
 avi_files = []
 h5_files = []
@@ -54,8 +59,8 @@ for h5 in h5_files:
         name = os.path.basename(h5).split(".avi")[0] + ".avi"
         video_paths[name] = avi_dict[ident]
 
-project_dir = "/data/jverpeut/JoVE_FineMotor/KPMS_models/Comparison_Plain"
-model_name = "2025_04_04-23_19_28"
+project_dir = args.project_dir
+model_name = args.model
 results = kpms.load_results(project_dir, model_name)
 coordinates, confidences, bodyparts = kpms.load_keypoints(dirs, "sleap")
 

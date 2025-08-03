@@ -178,9 +178,6 @@ kpms.print_dims_to_explain_variance(pca, 0.9)
 kpms.plot_scree(pca, project_dir=project_dir)
 kpms.plot_pcs(pca, project_dir=project_dir, **config())
 
-# perhaps break here and make two scripts, so that the proper latent_dim can be chosen for each batch
-# resolved w/ argparse
-
 kpms.update_config(project_dir, latent_dim=args.latent_dim)
 model = kpms.init_model(data, pca=pca, **config())
 
